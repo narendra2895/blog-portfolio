@@ -36,5 +36,5 @@ yarn-error.log*
 next-env.d.ts
 
 
-# # |blog post form 
-# /pages/form2895.js
+# |blog post form 
+/pages/form2895.js
