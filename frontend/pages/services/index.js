@@ -36,13 +36,13 @@ const Services = () => {
 
   return (
     <div className='container pt-52 mx-auto'>
-      <div className="container flex flex-col gap-10 xl:pt-40 items-center xl:items-start pt-0  mx-auto h-full">
+      <div className="container flex flex-col gap-10 items-center xl:items-start pt-0  mx-auto h-full">
         <Circles />
         <div className=" animate-pulse duration-75 z-10 lg:block hidden">
           <Image src={'/bulb.png'} height={350} width={220} className="absolute bottom-[50px] -left-[100px]" alt="bottom-image " />
         </div>
         <div >
-          <h1 className="h1 mb-1 lg:mb-2">My Services <span className="text-accent">.</span></h1>
+          <h1 className="h1 mb-1 lg:mb-2" style={{maxHeight:'20vh'}}>My Services <span className="text-accent">.</span></h1>
           <p>I have a good understanding of colors and design and love to create websites. </p>
         </div>
         

@@ -14,23 +14,23 @@ const projectData = [
     link: 'https://narendra2895.github.io/3dBoxModel/',
     desc: 'Using three js you can play around by customizing the dimensions and colors of the cube'
   },
+  // {
+  //   id: '2',
+  //   image: '/thumb6.png',
+  //   name: 'Gulf AdBlue India',
+  //   link: 'https://adblue.gulfoilindia.co.in/',
+  //   desc: 'Wordpress website which hass helped increase the marketing and business of the company. '
+
+  // },
   {
     id: '2',
-    image: '/thumb6.png',
-    name: 'Gulf AdBlue India',
-    link: 'https://adblue.gulfoilindia.co.in/',
-    desc: 'Wordpress website which hass helped increase the marketing and business of the company. '
-
+    image: '/blogs.webp',
+    name: 'Technical writing ',
+    link: 'https://kulkarninarendra.co.uk/blogs',
+    desc: 'Blogs page using mern stack'
   },
   {
     id: '3',
-    image: '/thumb7.png',
-    name: 'Society Pro ',
-    link: 'https://society-pro.com',
-    desc: 'UI design and logo design for rebranding the business and creating its online presence'
-  },
-  {
-    id: '4',
     image: '/thumb5.jpg',
     name: 'Javascript Projects',
     link: 'https://github.com/narendra2895/Javascript-Projects',
@@ -47,7 +47,7 @@ const Work = () => {
           <p className="xl:block hidden">During my tenure at 3Minds Digital, I successfully led the development of a WordPress microsite for Gulf AdBlue India, managing both frontend and backend components and maintaining close client collaboration. Additionally, I engineered a cost-effective store locator application using the Google Maps Platform, optimizing API calls for efficiency. My portfolio includes diverse JavaScript projects and an interactive 3D box modal created with Three.js, demonstrating my commitment to web development and innovation.</p>
         </div>
         <Swiper
-          className="basis-1/2 mySwiper"
+          className="basis-1/2 mySwiper pb-72"
           slidesPerView={'auto'}
           centeredSlides={true}
           loop={true}
@@ -55,7 +55,8 @@ const Work = () => {
             delay: 10000,
             disableOnInteraction: false,
           }}
-          modules={[Autoplay]}
+          pagination={{ clickable: true }}
+          modules={[Autoplay, Pagination]}
 
         >
           {projectData.map((item) => (
