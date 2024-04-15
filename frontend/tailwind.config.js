@@ -45,7 +45,12 @@ module.exports = {
           '0%':{opacity:'0'},
           '100%':{opacity:'1'}
         }
+      },
+      maxHeight: {
+        'custom-xs': 'calc(53vh - 3rem)', // Assuming this calculation
+        'custom-lg': 'calc(55vh - 3rem)', // Example for `lg` with a different value
       }
+
     },
   },
   container: {

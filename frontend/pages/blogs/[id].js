@@ -31,18 +31,20 @@ function formatDate(dateString) {
 // Blog post component
 const BlogPost = ({ blog }) => {
   return (
-    <div className="container pt-52 mx-auto">
+    <div className="container lg:pt-52 pt-40 mx-auto">
       <div >
-        <h1>{blog.title}</h1>
+        <h1 className='h1'>{blog.title}</h1>
         <p>{formatDate(blog.publishedDate)}</p>
-        <div className="overflow-auto pb-12" style={{ maxHeight: 'calc(60vh - 3rem)' }}>
+        <div className="overflow-auto custom-scroll pb-12 max-h-custom-xs lg:max-h-custom-lg" >
           {/* Assuming the blog content is stored in `blog.content` */}
-          <div dangerouslySetInnerHTML={{ __html: blog.content }}></div>          </div>
+          <div dangerouslySetInnerHTML={{ __html: blog.content }}></div>
+        </div>
         {/* Link back to the blog listing page */}
-        <Link href="/blogs">
-          <span className="text-blue-500 hover:underline cursor-pointer">Back to blog list</span>
+        <Link className='relative top-8' href="/blogs" >
+          <span className="bg-white p-3 rounded text-accent  hover:underline cursor-pointer">Back to blog list</span>
         </Link>
       </div>
+
     </div>
   );
 };
