@@ -48,6 +48,9 @@
   .input {
     @apply h-[52px];
   }
+  .blog-h1 {
+    @apply text-[15px] lg:text-[30px] font-semibold;
+  }
   .input {
     @apply w-full h-[52px] rounded-lg pl-6 capitalize;
   }
