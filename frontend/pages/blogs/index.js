@@ -4,6 +4,9 @@ import { useState, useEffect } from 'react';
 export async function getServerSideProps() {
   const res = await fetch('http://localhost:3001/api/blogs');
   const blogs = await res.json();
+
+   // Sorting blogs by publishedDate in descending order
+   blogs.sort((a, b) => new Date(b.publishedDate) - new Date(a.publishedDate));
   return { props: { blogs } };
 }
 
