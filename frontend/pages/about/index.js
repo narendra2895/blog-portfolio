@@ -68,7 +68,7 @@ const aboutData = [
       },
       {
         title: 'Full-Stack Developer - 3 Minds Digital',
-        stage: 'January 2022 - August 2023',
+        stage: 'January 2023 - August 2023',
       },
     ],
   },
