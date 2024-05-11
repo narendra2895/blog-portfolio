@@ -4,9 +4,10 @@ import { useState, useEffect } from 'react';
 export async function getServerSideProps() {
   const res = await fetch('http://localhost:3001/api/blogs');
   const blogs = await res.json();
+ 
 
-   // Sorting blogs by publishedDate in descending order
-   blogs.sort((a, b) => new Date(b.publishedDate) - new Date(a.publishedDate));
+  // Sorting blogs by publishedDate in descending order
+  blogs.sort((a, b) => new Date(b.publishedDate) - new Date(a.publishedDate));
   return { props: { blogs } };
 }
 
@@ -39,15 +40,17 @@ const Blog = ({ blogs }) => {
     } else {
       setFilteredBlogs(blogs.filter(blog => blog.category === selectedCategory));
     }
+
   }, [selectedCategory, blogs]);
+  console.log(blogs)
 
   // Extract unique categories from blogs
   const categories = ['All', ...new Set(blogs.map(blog => blog.category).filter(Boolean))];
 
   return (
-    <div className="container lg:pt-48 pt-40 mx-auto">
+    <div className="container lg:pt-38 pt-20 mx-auto">
       <h1 className='h1'>Blogs</h1>
-      <div className="flex border-b overflow-x-auto">
+      <div className="flex border-b overflow-x-auto custom-scroll">
         {categories.map(category => (
           <Tab
             key={category}
@@ -57,10 +60,10 @@ const Blog = ({ blogs }) => {
           />
         ))}
       </div>
-      <ul className='flex flex-row flex-wrap overflow-x-auto p-4' style={{ maxHeight: '50vh' }}>
+      <ul className='flex flex-row flex-wrap overflow-x-auto p-4 custom-scroll' style={{ maxHeight: '50vh' }}>
         {filteredBlogs.map(blog => (
-          <li className='w-64 h-48 mr-4 mb-4 bg-secondary shadow rounded overflow-hidden' key={blog._id}>
-            <Link href={`/blogs/${blog._id}`}>
+          <li className='w-64 h-48 mr-4 mb-4 bg-secondary shadow rounded overflow-hidden' key={blog.slug}>
+            <Link href={`/blogs/${blog.slug}`}>
               <span className="block h-full p-3">
                 <span className="text-lg font-semibold">{blog.title}</span>
                 <p>{formatDate(blog.publishedDate)}</p>

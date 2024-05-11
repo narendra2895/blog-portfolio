@@ -11,7 +11,8 @@
     "postinstall": "npm run install:frontend && npm run install:backend"
   },
   "dependencies": {
-    "sharp": "^0.33.3"
+    "sharp": "^0.33.3",
+    "slugify": "^1.6.6"
   },
   "devDependencies": {
     "concurrently": "^7.0.0"

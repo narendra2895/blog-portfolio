@@ -3,16 +3,19 @@ const Blog = require('../models/blogs');
 
 const router = express.Router();
 
+
+
 // Get all blogs
 router.get('/', async (req, res) => {
   const blogs = await Blog.find();
   res.json(blogs);
 });
 
-// Get a single blog by id
-router.get('/:id', async (req, res) => {
+// Get a single blog by slug
+// Express Router: Finding a blog by slug
+router.get('/:slug', async (req, res) => {
   try {
-    const blog = await Blog.findById(req.params.id);
+    const blog = await Blog.findOne({ slug: req.params.slug });
     if (!blog) {
       return res.status(404).json({ message: "Blog not found" });
     }
@@ -23,29 +26,54 @@ router.get('/:id', async (req, res) => {
 });
 
 
+
+
 // Create a new blog
 // Assuming this is in blogRoutes.js
 router.post('/', async (req, res) => {
-    const newBlog = new Blog(req.body);
-    try {
-      const savedBlog = await newBlog.save();
-      res.status(201).json(savedBlog);
-    } catch (error) {
-      res.status(400).json({ message: error.message });
-    }
-  });
-  
+  const newBlog = new Blog(req.body);
+  try {
+    const savedBlog = await newBlog.save();
+    res.status(201).json(savedBlog);
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+});
+
 
 // Update a blog
-router.put('/:id', async (req, res) => {
-  const updatedBlog = await Blog.findByIdAndUpdate(req.params.id, req.body, { new: true });
-  res.json(updatedBlog);
+// Update a blog by slug
+router.put('/:slug', async (req, res) => {
+  try {
+    const blog = await Blog.findOne({ slug: req.params.slug });
+    if (!blog) {
+      return res.status(404).json({ message: "Blog not found" });
+    }
+
+    Object.keys(req.body).forEach(key => {
+      blog[key] = req.body[key];
+    });
+
+    const updatedBlog = await blog.save();
+    res.json(updatedBlog);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
 });
 
-// Delete a blog
-router.delete('/:id', async (req, res) => {
-  await Blog.findByIdAndDelete(req.params.id);
-  res.status(204).send();
+// Delete a blog by slug
+router.delete('/:slug', async (req, res) => {
+  try {
+    const blog = await Blog.findOneAndDelete({ slug: req.params.slug });
+    if (!blog) {
+      return res.status(404).json({ message: "Blog not found" });
+    }
+    res.status(204).send();
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
 });
+
+
 
 module.exports = router;

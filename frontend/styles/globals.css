@@ -76,7 +76,9 @@
     justify-content: center;
     align-items: center;
   }
-  
+    .pt-20 {
+      padding-top: 8rem !important;
+    }
   .circular-child {
     position: absolute;
     font-size: 16px;

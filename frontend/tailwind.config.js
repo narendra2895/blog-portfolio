@@ -47,8 +47,8 @@ module.exports = {
         }
       },
       maxHeight: {
-        'custom-xs': 'calc(53vh - 3rem)', // Assuming this calculation
-        'custom-lg': 'calc(55vh - 3rem)', // Example for `lg` with a different value
+        'custom-xs': 'calc(65vh - 3rem)', // Assuming this calculation
+        'custom-lg': 'calc(65vh - 3rem)', // Example for `lg` with a different value
       },
       fontSize: {
         'blog-h1': '30px',        // Custom font size for desktop
