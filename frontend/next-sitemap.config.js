@@ -1,12 +1,12 @@
+// frontend/next-sitemap.config.js
 module.exports = {
-  siteUrl: 'https://kulkarninarendra.co.uk', // Replace with your actual domain
+  siteUrl: 'https://kulkarninarendra.co.uk', // Use localhost for local testing
   generateRobotsTxt: true, // Generate robots.txt file
   sitemapSize: 7000, // Max number of URLs per sitemap file
   outDir: './public', // Directory to save the generated sitemaps
   autoLastmod: true, // Automatically add last modification timestamp
   exclude: ['/404', '/api/*'], // Exclude specific routes
   transform: async (config, path) => {
-    // Customize the changefreq and priority if needed
     return {
       loc: path, // URL location
       changefreq: path === '/' ? 'daily' : 'weekly', // Frequency of changes
