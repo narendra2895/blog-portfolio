@@ -31,14 +31,17 @@ router.get('/:slug', async (req, res) => {
 // Create a new blog
 // Assuming this is in blogRoutes.js
 router.post('/', async (req, res) => {
+  console.log('Received data:', req.body);
   const newBlog = new Blog(req.body);
   try {
-    const savedBlog = await newBlog.save();
-    res.status(201).json(savedBlog);
+    await newBlog.save();
+    res.status(201).send(newBlog);
   } catch (error) {
-    res.status(400).json({ message: error.message });
+    console.error('Error saving blog:', error);
+    res.status(400).json({ error: error.message });
   }
 });
+
 
 
 // Update a blog

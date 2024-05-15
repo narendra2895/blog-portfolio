@@ -4,13 +4,14 @@
   "scripts": {
     "install:frontend": "cd frontend && npm install",
     "install:backend": "cd backend && npm install",
-    "build:frontend": "cd frontend && npm run build",
+    "build:frontend": "cd frontend && npm run build  && next-sitemap",
     "start:frontend": "cd frontend && next start -p 3000",
     "start:backend": "cd backend && node server.js -p 3001",
     "start": "npm run build:frontend && concurrently \"npm run start:frontend\" \"npm run start:backend\"",
     "postinstall": "npm run install:frontend && npm run install:backend"
   },
   "dependencies": {
+    "next-sitemap": "^4.2.3",
     "sharp": "^0.33.3",
     "slugify": "^1.6.6"
   },
