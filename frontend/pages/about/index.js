@@ -108,13 +108,13 @@ const About = () => {
   console.log(index)
 
 
-  return (<div className="h-full bg-primary/30 pt-32 text-center xl:text-left">
+  return (<div className="h-full bg-primary/30 pt-32 text-center xl:text-left  overflow-y-scroll " >
     <Circles />
     {/* {avatar image} */}
     <motion.div variants={fadeIn('right', 1.5)} initial="hidden" animate="show" exit="hidden" className="hidden  lg:flex xl:flex absolute bottom-[-50px] lg:bottom-[-50px] md:bottom-[65px] -left-[104px] md:w-[450px] md:h-[330px] w-[550px] h-[465px] lg:w-[550px] lg:h-[465px]">
       <Avatar2 />
     </motion.div>
-    <div className="container mx-auto h-full flex flex-col items-start xl:flex-row gap-x-12 gap-y-12">
+    <div className="container mx-auto h-full flex flex-col items-start xl:flex-row gap-x-12 gap-y-12 mt-10  lg:mt-0 mb-10 lg:mb-0">
       <div className="flex-1 flex flex-col justify-center "> 
       <h1 className="h1">Hello Peeps<span className="text-accent">.</span></h1>
       <p>I think the website will let you know about my professional skills anyways. So let me tell you about the kind of person I am. I love to watch anime and 
@@ -122,7 +122,7 @@ const About = () => {
       </p>
       </div>
       <div className="flex flex-col w-full xl:max-w-[48%] h-[480px]   ">
-        <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4   ">
+        <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4    ">
           {aboutData.map((item, itemIndex) => {
             return (
               <div key={itemIndex} className={`${index === itemIndex && 'text-accent afteer:w-[100%] after:bg-accent after:transition-all after:duration-300'} cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:bottom-1 after:left-0`} onClick={() => setIndex(itemIndex)}> {item.title} </div>

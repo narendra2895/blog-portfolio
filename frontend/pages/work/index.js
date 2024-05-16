@@ -40,7 +40,7 @@ const projectData = [
 
 const Work = () => {
   return (
-    <div className="clg:p-40 p-10 pt-52 mx-auto scroll custom-scroll pb-20">
+    <div className="lg:p-40 p-10 pt-52 mx-auto scroll custom-scroll pb-20">
       <div className="flex flex-col xl:gap-10  content justify-center items-center ">
         <div className="basis-1/2">
           <h1 className="h1 basis-1/2 xl:text-center"> My <span className="text-accent">Work.</span></h1>

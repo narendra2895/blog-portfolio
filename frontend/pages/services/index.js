@@ -35,14 +35,14 @@ const servicesData = [
 const Services = () => {
 
   return (
-    <div className='container h-full bg-primary/30 pt-32 text-center xl:text-left'>
+    <div className='w-full h-full bg-primary/30 pt-32 text-center xl:text-left'>
       <div className="container flex flex-col gap-10 items-center xl:items-start pt-0  mx-auto h-full">
-        <Circles />
-        <div className=" animate-pulse duration-75 z-10 lg:block hidden">
+        <Circles className='xl:block hidden' />
+        <div className=" animate-pulse duration-75 z-10 xl:block hidden">
           <Image src={'/bulb.png'} height={350} width={220} className="absolute bottom-[50px] -left-[100px]" alt="bottom-image " />
         </div>
         <div >
-          <h1 className="h1 mb-1 lg:mb-2" style={{maxHeight:'20vh'}}>My Services <span className="text-accent">.</span></h1>
+          <h1 className="h1 mb-1 lg:mb-2 mt-10 lg:mb:0" style={{maxHeight:'20vh'}}>My Services <span className="text-accent">.</span></h1>
           <p>I have a good understanding of colors and design and love to create websites. </p>
         </div>
         
@@ -51,10 +51,10 @@ const Services = () => {
             slidesPerView={'auto'}
             centeredSlides={true}
             loop={true}
-            // autoplay={{
-            //   delay: 10000,
-            //   disableOnInteraction: false,
-            // }}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+            }}
             modules={[Autoplay]}
           >
             {servicesData.map((item) => (
