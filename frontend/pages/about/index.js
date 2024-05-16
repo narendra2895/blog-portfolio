@@ -108,7 +108,7 @@ const About = () => {
   console.log(index)
 
 
-  return (<div className="h-full bg-primary/30 pt-32 text-center xl:text-left  overflow-y-scroll " >
+  return (<div className="h-full bg-primary/30 pt-16 lg:pt-40 text-center xl:text-left  overflow-y-scroll " >
     <Circles />
     {/* {avatar image} */}
     <motion.div variants={fadeIn('right', 1.5)} initial="hidden" animate="show" exit="hidden" className="hidden  lg:flex xl:flex absolute bottom-[-50px] lg:bottom-[-50px] md:bottom-[65px] -left-[104px] md:w-[450px] md:h-[330px] w-[550px] h-[465px] lg:w-[550px] lg:h-[465px]">

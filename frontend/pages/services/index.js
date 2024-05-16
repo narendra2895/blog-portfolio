@@ -42,7 +42,7 @@ const Services = () => {
           <Image src={'/bulb.png'} height={350} width={220} className="absolute bottom-[50px] -left-[100px]" alt="bottom-image " />
         </div>
         <div >
-          <h1 className="h1 mb-1 lg:mb-2 mt-10 lg:mb:0" style={{maxHeight:'20vh'}}>My Services <span className="text-accent">.</span></h1>
+          <h1 className="h1 mb-1 lg:mb-2  lg:mb:0" style={{maxHeight:'20vh'}}>My Services <span className="text-accent">.</span></h1>
           <p>I have a good understanding of colors and design and love to create websites. </p>
         </div>
         

@@ -40,10 +40,10 @@ const projectData = [
 
 const Work = () => {
   return (
-    <div className="lg:p-40 p-10 pt-52 mx-auto scroll custom-scroll pb-20">
+    <div className="lg:p-40 p-5 pt-20 mx-auto scroll custom-scroll pb-20">
       <div className="flex flex-col xl:gap-10  content justify-center items-center ">
         <div className="basis-1/2">
-          <h1 className="h1 basis-1/2 xl:text-center"> My <span className="text-accent">Work.</span></h1>
+          <h1 className="h1 basis-1/2 xl:text-center mb-0"> My <span className="text-accent">Work.</span></h1>
           <p className="">During my tenure at 3Minds Digital, I successfully led the development of a WordPress microsite for Gulf AdBlue India, managing both frontend and backend components and maintaining close client collaboration. Additionally, I engineered a cost-effective store locator application using the Google Maps Platform, optimizing API calls for efficiency. My portfolio includes diverse JavaScript projects and an interactive 3D box modal created with Three.js, demonstrating my commitment to web development and innovation.</p>
         </div>
         <div className="flex lg:flex-row flex-col  gap:20 xs:mt-20 mt-10">

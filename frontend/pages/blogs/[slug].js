@@ -30,7 +30,7 @@ const BlogPost = ({ blog }) => {
         <meta property="og:type" content="article" />
       </Head>
 
-      <h1 className="blog-h1 mt-10">{blog.title}</h1>
+      <h1 className="blog-h1 ">{blog.title}</h1>
       <div className="flex flex-col  ">
         {/* Image section */}
         {blog.image && (
