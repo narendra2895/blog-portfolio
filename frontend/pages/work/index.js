@@ -40,40 +40,33 @@ const projectData = [
 
 const Work = () => {
   return (
-    <div className="container pt-52 mx-auto">
-      <div className="flex flex-col xl:gap-5  content justify-center items-center">
+    <div className="clg:p-40 p-10 pt-52 mx-auto scroll custom-scroll pb-20">
+      <div className="flex flex-col xl:gap-10  content justify-center items-center ">
         <div className="basis-1/2">
-          <h1 className="h1 basis-1/2"> My <span className="text-accent">Work.</span></h1>
-          <p className="xl:block hidden">During my tenure at 3Minds Digital, I successfully led the development of a WordPress microsite for Gulf AdBlue India, managing both frontend and backend components and maintaining close client collaboration. Additionally, I engineered a cost-effective store locator application using the Google Maps Platform, optimizing API calls for efficiency. My portfolio includes diverse JavaScript projects and an interactive 3D box modal created with Three.js, demonstrating my commitment to web development and innovation.</p>
+          <h1 className="h1 basis-1/2 xl:text-center"> My <span className="text-accent">Work.</span></h1>
+          <p className="">During my tenure at 3Minds Digital, I successfully led the development of a WordPress microsite for Gulf AdBlue India, managing both frontend and backend components and maintaining close client collaboration. Additionally, I engineered a cost-effective store locator application using the Google Maps Platform, optimizing API calls for efficiency. My portfolio includes diverse JavaScript projects and an interactive 3D box modal created with Three.js, demonstrating my commitment to web development and innovation.</p>
         </div>
-        <Swiper
-          className="basis-1/2 mySwiper pb-72"
-          slidesPerView={'auto'}
-          centeredSlides={true}
-          loop={true}
-          autoplay={{
-            delay: 10000,
-            disableOnInteraction: false,
-          }}
-          pagination={{ clickable: true }}
-          modules={[Autoplay, Pagination]}
+        <div className="flex lg:flex-row xs:flex-col  gap:20 xs:mt-20 mt-10">
 
-        >
           {projectData.map((item) => (
-            <SwiperSlide key={item.id} className="h-100">
-              <div className="flex flex-col gap-3 custom-scroll" >
-                <Image src={item.image} height={300} width={350} alt="image" className="rounded-xl h-[200px] w-[250px] mx-auto" />
-                <a href={item.link} target="blank"><p className="text-center text-2xl">{item.name}</p></a>
-                <p className="xl:text-center " >{item.desc}</p>
-              </div>
-            </SwiperSlide>
+            // <SwiperSlide key={item.id} className="h-100">
+            <>
+           
+                <div className="flex flex-col gap-3 custom-scroll  lg:basis-1/2 mt-5 mb-5 " >
+                  <Image src={item.image} height={300} width={350} alt="image" className="rounded-xl h-[200px] w-[250px] mx-auto" />
+                  <a href={item.link} target="blank" clas><p className="text-center text-2xl">{item.name}</p></a>
+                  <p className="xl:text-center " >{item.desc}</p>
+                </div>
+              
+            </>
+            // </SwiperSlide>
           ))}
 
-        </Swiper>
+</div>
+</div>
       </div>
 
-    </div>
-  );
-};
+
+        )}
 
 export default Work;
