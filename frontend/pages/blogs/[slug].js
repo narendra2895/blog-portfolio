@@ -20,7 +20,7 @@ export async function getServerSideProps(context) {
 // Blog post component
 const BlogPost = ({ blog }) => {
   return (
-    <div className="container lg:pt-52 pt-20 mx-auto">
+    <div className="lg:p-40 p-10 h-screen overflow-scroll custom-scroll lg:pt-52 pt-20 mx-auto pb-40">
       <Head>
         <title>{blog ? blog.title : "Blog Post"}</title>
         <meta name="description" content={blog ? blog.summary : "Blog post content"} />
@@ -31,7 +31,7 @@ const BlogPost = ({ blog }) => {
       </Head>
 
       <h1 className="blog-h1">{blog.title}</h1>
-      <div className="flex flex-col  overflow-y-scroll custom-scroll  max-h-custom-xs lg:max-h-custom-lg">
+      <div className="flex flex-col  ">
         {/* Image section */}
         {blog.image && (
           <img src={blog.image} alt={blog.title} className="max-h-80 w-full object-contain mx-auto" />

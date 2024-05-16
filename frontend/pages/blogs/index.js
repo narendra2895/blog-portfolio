@@ -45,7 +45,7 @@ const Blog = ({ blogs }) => {
   const categories = ['All', ...new Set(blogs.map(blog => blog.category).filter(Boolean))];
 
   return (
-    <div className="container lg:pt-38 pt-20 mx-auto">
+    <div className="p-40 overflow-y-scroll custom scroll lg:pt-38 pt-20 mx-auto">
       <h1 className='h1'>Blogs</h1>
       <div className="flex border-b overflow-x-auto custom-scroll">
         {categories.map(category => (
@@ -57,7 +57,7 @@ const Blog = ({ blogs }) => {
           />
         ))}
       </div>
-      <ul className='flex flex-row flex-wrap overflow-x-auto p-4 custom-scroll' style={{ maxHeight: '50vh' }}>
+      <ul className='flex flex-row flex-wrap overflow-x-auto p-4 custom-scroll' style={{ maxHeight: '60vh' }}>
         {filteredBlogs.map(blog => (
           <li
             className='w-64 h-48 mr-4 mb-4 bg-secondary shadow rounded overflow-hidden'
