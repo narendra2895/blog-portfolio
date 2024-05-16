@@ -45,7 +45,7 @@ const Blog = ({ blogs }) => {
   const categories = ['All', ...new Set(blogs.map(blog => blog.category).filter(Boolean))];
 
   return (
-    <div className="p-40 overflow-y-scroll custom scroll lg:pt-38 pt-20 mx-auto">
+    <div className="xl:p-40 p-10 overflow-y-scroll custom scroll lg:pt-38 pt-20 mx-auto">
       <h1 className='h1'>Blogs</h1>
       <div className="flex border-b overflow-x-auto custom-scroll">
         {categories.map(category => (
