@@ -28,7 +28,7 @@ const Home = () => {
             <p
               className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
             >
-              Ignited with s, I embarked on a transformative web development journey. From the inception, my focus on frontend skills blazed a trail of innovation. Overcoming hurdles, I sculpted captivating websites, each line of code reflecting my dedication to mastering the art of frontend design.
+              Ignited with curiosity, I embarked on a transformative web development journey. From the inception, my focus on frontend skills blazed a trail of innovation. Overcoming hurdles, I sculpted captivating websites, each line of code reflecting my dedication to mastering the art of frontend design.
             </p>
             {/* btn */}
             <div className="flex justify-center xl:hidden relative">

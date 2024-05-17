@@ -12,7 +12,7 @@ const projectData = [
     image: 'https://res.cloudinary.com/dldblks5t/image/upload/v1715903723/Screenshot_2024-05-17_005408_ni101d.png',
     name: 'AI Image Manipulation SAAS',
     link: 'https://snaprealm.vercel.app/',
-    desc: 'SAAS for image manipulation using AI'
+    desc: 'SAAS for image manipulation using Typescript, tailwind, clerk,stripe and AI'
   },
   {
     id: '1',
