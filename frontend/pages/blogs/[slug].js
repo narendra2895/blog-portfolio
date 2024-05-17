@@ -20,7 +20,7 @@ export async function getServerSideProps(context) {
 // Blog post component
 const BlogPost = ({ blog }) => {
   return (
-    <div className="lg:p-40 p-10  pb-40 h-screen overflow-scroll custom-scroll lg:pt-52 pt-20 mx-auto ">
+    <div className="lg:p-40 p-10  h-screen overflow-scroll custom-scroll lg:pt-52 pt-20 mx-auto pb-64">
       <Head>
         <title>{blog ? blog.title : "Blog Post"}</title>
         <meta name="description" content={blog ? blog.summary : "Blog post content"} />
@@ -42,7 +42,7 @@ const BlogPost = ({ blog }) => {
       </div>
       {/* Back to blog list link */}
 
-      <Link href="/blogs">
+      <Link href="/blogs" className=''>
         <span className="relative top-8 bg-white p-3 rounded text-accent hover:underline cursor-pointer">Back to blog list</span>
       </Link>
     </div>
