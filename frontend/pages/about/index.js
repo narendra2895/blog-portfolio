@@ -111,7 +111,7 @@ const About = () => {
   return (<div className="h-full bg-primary/30 pt-16 lg:pt-40 text-center xl:text-left  overflow-y-scroll " >
     <Circles />
     {/* {avatar image} */}
-    <motion.div variants={fadeIn('right', 1.5)} initial="hidden" animate="show" exit="hidden" className="hidden  lg:flex xl:flex absolute bottom-[-50px] lg:bottom-[-50px] md:bottom-[65px] -left-[104px] md:w-[450px] md:h-[330px] w-[550px] h-[465px] lg:w-[550px] lg:h-[465px]">
+    <motion.div variants={fadeIn('right', 1.5)} initial="hidden" animate="show" exit="hidden" className="hidden  xl:flex xl:flex absolute bottom-[-50px] lg:bottom-[-50px] md:bottom-[65px] -left-[104px] md:w-[450px] md:h-[330px] w-[550px] h-[465px] lg:w-[450px] lg:h-[365px] ">
       <Avatar2 />
     </motion.div>
     <div className="container mx-auto h-full flex flex-col items-start xl:flex-row gap-x-12 gap-y-12 mt-10  lg:mt-0 mb-10 lg:mb-0">
@@ -135,7 +135,7 @@ const About = () => {
             return <div key={itemIndex}>
               <div>{item.title}</div>
               <p>{item.stage}</p>
-              <div className="flex xl:flex-nowrap flex-wrap gap-x-8  gap-y-10 mt-[10px] justify-center">
+              <div className="flex  flex-wrap  gap-x-8  gap-y-10 mt-[10px]  justify-center xs:justify-left w-100">
                   {item.icons?.map((icon, iconIndex)=>{
                     return (
                       <div className="text-3xl xl:text-6xl" key={iconIndex}>
