@@ -61,13 +61,13 @@ const Work = () => {
           <h1 className="h1 basis-1/2 text-center mb-0"> My <span className="text-accent">Work.</span></h1>
           <p className="">During my tenure at 3Minds Digital, I successfully led the development of a WordPress microsite for Gulf AdBlue India, managing both frontend and backend components and maintaining close client collaboration. Additionally, I engineered a cost-effective store locator application using the Google Maps Platform, optimizing API calls for efficiency. My portfolio includes diverse JavaScript projects and an interactive 3D box modal created with Three.js, demonstrating my commitment to web development and innovation.</p>
         </div>
-        <div className="flex lg:flex-row flex-col  gap:20 xs:mt-20 mt-10 mb-20">
+        <div className="flex lg:flex-row  lg:flex-wrap flex-col  items-center justify-center gap:20 xs:mt-20 mt-10 mb-20">
 
           {projectData.map((item) => (
             // <SwiperSlide key={item.id} className="h-100">
             <>
            
-                <div className="flex flex-col gap-3 custom-scroll  lg:basis-1/2 mt-5 mb-5 " >
+                <div className="flex flex-col gap-3 items-center custom-scroll   lg:basis-1/2 mt-5 mb-5 " >
                   <Image src={item.image} height={300} width={350} alt="image" className="rounded-xl h-[200px] w-[250px] mx-auto" />
                   <a href={item.link} target="blank" clas><p className="text-center text-2xl">{item.name}</p></a>
                   <p className="xl:text-center " >{item.desc}</p>
